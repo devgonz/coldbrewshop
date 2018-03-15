@@ -1,9 +1,68 @@
 {
-  "images": [{
-    "src": "image-one.png",
-    "alt": "Image one alt text"
+  "coffees": [{
+    "src": "thumb-intelligentsia.jpg",
+    "alt": "Intelligentsia Product Image",
+    "title": "Intelligentsia El Diablo Dark Roast",
+    "body": "Morbi sagittis justo a velit placerat ullamcorper quis quis velit."
   }, {
-    "src": "image-two.png",
-    "alt": "Image two alt text"
+    "src": "thumb-stone-street.jpg",
+    "alt": "Two tall glasses of iced cold brew",
+    "title": "Stone Street Columbian Supremo",
+    "body": "Morbi sagittis justo a velit placerat ullamcorper quis quis velit."
+  }, {
+    "src": "thumb-vail-mtn.jpg",
+    "alt": "Snowy mountain scene with cross-country skier illustration",
+    "title": "Vail Mountain Nordic Blend",
+    "body": "Morbi sagittis justo a velit placerat ullamcorper quis quis velit."
+  }, {
+    "src": "thumb-conscious.jpg",
+    "alt": "Motorcycle riders travel on a road at sunset in Latin America",
+    "title": "Conscious Mantécca Espresso",
+    "body": "Morbi sagittis justo a velit placerat ullamcorper quis quis velit."
+  }, {
+    "src": "thumb-verve.jpg",
+    "alt": "Verve product image",
+    "title": "Verve Streetlevel Espresso",
+    "body": "Morbi sagittis justo a velit placerat ullamcorper quis quis velit."
+  }, {
+    "src": "thumb-stumptown.jpg",
+    "alt": "Stumptown product image",
+    "title": "Stumptown Holler Mountain",
+    "body": "Morbi sagittis justo a velit placerat ullamcorper quis quis velit."
+  }],
+  "recipes": [{
+    "title": "Spanish Cold-Brew",
+    "ingredients": [
+      "1 cup cold brew",
+      "1/4 cup condensed milk",
+      "1 cup whole milk"
+    ],
+    "description": "Combine condensed milk, whole milk & coffee. Mix thoroughly. Adjust condensed milk to taste."
+  }, {
+    "title": "Cold-Brew Vanilla Float",
+    "ingredients": [
+      "2 cups cold brew",
+      "2 scoops vanilla ice cream",
+      "Favorite chocolate bar shavings to taste"
+    ],
+    "description": "In serving glass add scoops of ice cream. Pour coffee into glass. Sprinkle chocolate shavings to taste."
+  }, {
+    "title": "Sea Salt Cold-Brew",
+    "ingredients": [
+      "4 cups cold brew",
+      "1 cup whipped cream",
+      "2 tsp sea salt flakes",
+      "2 cups sugar, adjust to taste"
+    ],
+    "description": "Dissolve sugar in coffee. Mix sea salt & cream. Serve coffee over ice. Add 1/2 cup of cream & stir. Garnish with a bit of salt."
+  }, {
+    "title": "Spicy Cold-Brew",
+    "ingredients": [
+      "2 cups cold brew",
+      "Cinnamon powder",
+      "Dark chocolate",
+      "1/4 cup Coconut cream  (per glass)"
+    ],
+    "description": "Add a pinch of cinnamon, a pinch chili powder & chocolate shavings to coffee (adjust to taste. Mix all ingredients in a..."
   }]
 }

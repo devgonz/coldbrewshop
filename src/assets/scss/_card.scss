@@ -1,0 +1,39 @@
+@mixin card {
+  margin-bottom: 4.0rem;
+  background-color: $card-bg-color
+}
+
+.card {
+  @include card;
+  img {
+    width: 100%;
+    display: block;
+  }
+  h4 {
+    margin-bottom: 1.0rem;
+  }
+  .card-body {
+    padding: 1.6rem;
+  }
+}
+
+.kits-block {
+  @include card;
+  display: flex;
+  img {
+    width: 100%;
+    display: block;
+  }
+  .image, .body {
+    @include border-box;
+    width: 100%;
+  }
+  .image {
+    padding: 4.0rem 0;
+    padding-right: 2.0rem;
+    align-self: center;
+  }
+  .body {
+    padding: 4.0rem 6.0rem 4.0rem 2.0rem;
+  }
+}

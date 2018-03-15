@@ -1,0 +1,133 @@
+@mixin margin-bottom {
+  margin-bottom: 5.6rem;
+}
+
+.header-section {
+  @include clearfix;
+  // height: 37.5vw;
+  padding: 15vw 0;
+  background: linear-gradient(to bottom left, rgba(22,26,43,0.70),rgba(5,33,56,0.70));
+  // background: linear-gradient(to bottom left, rgba(22,26,43,0.70),rgba(5,33,56,0.70)), url('../img/blair-fraser-21140-unsplash.jpg') no-repeat;
+  // background-size: cover;
+  color: $white;
+  text-align: center;
+  margin-top: 9.6rem;
+  h1 {
+    color: $white;
+    margin-bottom: 1.6rem;
+  }
+  h4 {
+    color: $white;
+    font-size: 2.0rem;
+    font-weight: 400;
+  }
+}
+
+.coffee-section {
+  margin-top: -9.0rem;
+  margin-bottom: 1.6rem;
+}
+
+.kit-section {
+  @include margin-bottom;
+}
+
+.how-to-section {
+  color: $light-gray;
+  padding: 5.6rem 0 6.4rem;
+  background: linear-gradient(to bottom left, rgba(196,90,0,0.30),rgba(196,90,0,0.30));
+  // background: linear-gradient(to bottom left, rgba(196,90,0,0.30),rgba(196,90,0,0.30)), url('../img/michal-parzuchowski-324218-unsplash.jpg') no-repeat center center;
+  // background-size: cover;
+  text-align: center;
+  .container {
+    max-width: 60.0rem;
+  }
+  h2 {
+    color: $white;
+  }
+  h4 {
+    color: $light-gray;
+    margin-bottom: 0.8rem;
+  }
+  .instruction-block {
+    background-color: rgba($black, 0.64);
+    padding: 2.4rem;
+    margin-bottom: 0.8rem;
+    p {
+      margin-bottom: 0;
+    }
+  }
+}
+
+.recipes-section {
+  background-image: linear-gradient(150deg, #D8A95E 0%, #EBC378 100%);
+  padding: 4.0rem 0 1.6rem;
+  h2 {
+    text-align: center;
+  }
+  .recipe-item {
+    @include border-box;
+    background-color: rgba($tan, 0.2);
+    padding: 1.6rem;
+    margin-bottom: 4.0rem;
+    height: calc(100% - 4.0rem);
+  }
+}
+
+.contact-section {
+  padding: 4.0rem 0;
+  .container {
+    max-width: 60.0rem;
+  }
+  input[type="text"],
+  input[type="email"],
+  textarea {
+    @include border-box;
+    width: 100%;
+  }
+  .field-group {
+    margin-bottom: 1.6rem;
+  }
+}
+
+.signup-section {
+  @include clearfix;
+  background-color: $black;
+  color: $medium-gray;
+  text-align: center;
+  padding: 5.6rem 0;
+  .container {
+    max-width: 60.0rem;
+  }
+  h3 {
+    color: $white;
+  }
+  .field-group {
+    display: flex;
+  }
+  input[type="email"] {
+    width: 100%;
+    height: 4.8rem;
+    margin-right: 8px;
+    background-color: rgba(#395469, 0.6);
+    border-color: #65798A;
+    color: $white;
+    &::placeholder {
+      color: rgba($white, 0.5);
+    }
+    &:focus {
+      border-color: #33C3F0;
+    }
+  }
+}
+
+.footer {
+  @include clearfix;
+  @include border-box;
+  height: 9.6rem;
+  color: rgba($medium-gray, 0.56);
+  text-align: center;
+  background-color: $black;
+  border-top: 1px solid rgba($dark-gray, 0.64);
+  padding: 3.2rem 0;
+}

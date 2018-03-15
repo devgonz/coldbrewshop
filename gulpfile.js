@@ -39,7 +39,10 @@ var config = {
   },
   data: src + '/assets/data/data.json',
   scripts: {
-  	src: src + '/assets/js/**/*.js',
+  	src: [
+			src + '/assets/_vendor/parallax.js-1.5.0/parallax.js',
+			src + '/assets/js/app.js'
+		],
   	dest: dest + '/assets/js/'
   }
 }

@@ -1,0 +1,82 @@
+$white:         #FFFFFF;
+$light-gray:    #E6EAEC;
+$medium-gray:   #909FAB;
+$dark-gray:     #395469;
+$black:         #0E2E48;
+
+$blue:          #3498db;
+$yellow:        #f1c40f;
+$green:         #2ecc71;
+$red:           #e74c3c;
+
+$cream:         #FFDC91;
+$tan:           #9D5D12;
+
+$bg-color: $light-gray;
+$text-color: $dark-gray;
+
+$paragraph-font-size: 1.6rem;
+$paragraph-font-family: 'Open Sans', sans-serif;
+
+// links
+$anchor-color: $tan;
+$anchor-color-hover: scale-color($anchor-color, lightness, 30%);
+$anchor-color-light: $cream;
+
+// navigation
+$nav-bg-color: $white;
+$menu-anchor-font-size: 1.4rem;
+$menu-anchor-hover-color: $yellow;
+$menu-anchor-color: $white;
+
+//cards
+$card-bg-color: $white;
+$card-text-font-size: 1rem;
+
+//headings
+$heading-color: $black;
+$heading-font-family: 'Open Sans', sans-serif;
+$heading-font-weight: 700;
+$heading-font-size: (
+  small: (
+    h1: 4.0rem,
+    h2: 3.6rem,
+    h3: 2.8rem,
+    h4: 2.0rem,
+    h5: 1.8rem,
+    h6: 1.6rem
+  ),
+  medium: (
+    h1: 4.8rem,
+    h2: 3.8rem,
+    h3: 2.8rem,
+    h4: 2.0rem,
+    h5: 1.8rem,
+    h6: 1.6rem
+  )
+);
+
+// grid & responsive
+$breakpoints: (
+    small: 576px,
+    medium: 768px,
+    large: 1024px,
+    xlarge: 1200px,
+    xxlarge: 1440px
+);
+$columns: 12;
+$grid-max-width: 1320px;
+
+// buttons
+$btn-text-color: $tan;
+$btn-font-size: 1.6rem;
+$btn-font-weight: bold;
+
+//tables
+$table-font-size: 1.2rem;
+$table-caption-font-family:  $heading-font-family;
+$table-caption-text-color: $yellow;
+$table-color: $white;
+$table-hover-bg-color: darken($yellow, 5);
+
+//footer

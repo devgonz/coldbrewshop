@@ -1,0 +1,58 @@
+@include normalize();
+
+/* Base Styles
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+/* NOTE
+html is set to 62.5% so that all the REM measurements throughout
+are based on 10px sizing. So basically 1.5rem = 15px :) */
+html {
+  font-size: 62.5%;
+}
+body {
+  font-size: $paragraph-font-size;
+  font-family: $paragraph-font-family;
+  line-height: 1.6;
+  font-weight: 400;
+  color: $text-color;
+  background-color: $bg-color;
+}
+
+/* Links
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+a {
+  color: $anchor-color;
+}
+a:hover {
+  color: $anchor-color-hover;
+}
+
+/* Lists
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+ul {
+  list-style: disc outside;
+}
+ol {
+  list-style: decimal outside
+}
+ol, ul {
+  padding-left: 1.8rem;
+  margin-top: 0;
+}
+ul ul,
+ul ol,
+ol ol,
+ol ul {
+  margin: 1.5rem 0 1.5rem 3rem;
+  font-size: 90%;
+}
+li {
+  margin-bottom: 1rem;
+}
+
+/* Misc
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+hr {
+  margin-top: 3rem;
+  margin-bottom: 3.5rem;
+  border-width: 0;
+  border-top: 1px solid #E1E1E1; }

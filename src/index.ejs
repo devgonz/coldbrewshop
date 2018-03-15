@@ -2,15 +2,173 @@
 <html>
   <head>
     <meta charset="UTF-8">
-    <title>title</title>
+    <title>Cold Brew Shop</title>
     <link rel="stylesheet" type="text/css" href="assets/css/app.css">
   </head>
   <body>
-  	<h1>Hello King ldjljfd rock</h1>
-  	<% include partials/nav %>
+  	<div class="navbar">
+      <div class="logo">
+        <a href="index.com"><img src="/assets/img/logo.png" alt="Cold Brew House"></a>
+      </div>
+      <nav>
+        <ul class="menu">
+          <li><a href="">Coffees</a></li>
+          <li><a href="">Brew Kit</a></li>
+          <li><a href="">How-To</a></li>
+          <li><a href="">Recipes</a></li>
+          <li><a href="">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
 
-  	<% images.forEach(function(image) { %>
-  		<p>Source: <%= image.src %></p>
-  	<% }); %>
+    <section>
+      <div class="header-section">
+        <div class="container">
+          <h1>Cold Brewed Inspiration</h1>
+          <h4>Choice roasts for the most refreshing, cold brew coffee.</h4>
+        </div>
+      </div>
+    </section>
+
+    <div class="container">
+      <!-- Start coffee-section -->
+      <section>
+        <div class="coffee-section">
+          <div class="grid">
+            <% coffees.forEach(function(coffee) { %>
+            <div class="col-sm-6 col-lg-4">
+              <div class="coffee-item card">
+                <img src="assets/img/<%= coffee.src %>" alt="<%= coffee.alt %>">
+                <div class="card-body">
+                  <h4><%= coffee.title %></h4>
+                  <p><%= coffee.body %></p>
+                  <a href="">Details</a>
+                </div>
+              </div>
+            </div>
+            <% }); %>
+          </div>
+        </div>
+      </section>
+      <!-- End coffee-section -->
+
+      <!-- Start kit-section -->
+      <section>
+        <div class="kit-section">
+          <div class="kits-block">
+            <div class="image">
+              <img src="assets/img/thumb-coffee-tribe.jpg" alt="">
+            </div>
+            <div class="body">
+              <h2>Coffee Tribe Premium <span class="nowrap">Cold-Brew</span> Coffee Maker</h2>
+              <p>Apollonius of Perga bits of moving fluff, extraplanetary, ship of the imagination citizens of distant epochs!</p>
+              <a href="" class="button">View Item</a>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- End kit section -->
+    </div>
+    <!-- Start how-to-section -->
+    <section>
+      <div class="how-to-section">
+        <div class="container">
+          <h2>How To Cold-Brew</h2>
+          <div class="instruction-block">
+            <div class="body">
+              <h4>Step 1:</h4>
+              <p>Add coarse ground coffee into the filter, insert the filter into the jar and gently add cold water.</p>
+            </div>
+          </div>
+          <div class="instruction-block">
+            <div class="body">
+              <h4>Step 2:</h4>
+              <p>Let the mixture rest in the refrigerator for at least 12 hrs.</p>
+            </div>
+          </div>
+          <div class="instruction-block">
+            <div class="body">
+              <h4>Step 3:</h4>
+              <p>Gently remove & rinse filter!</P>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- End how-to-section -->
+
+    <!-- Start recipe-section -->
+    <section>
+      <div class="recipes-section">
+        <div class="container">
+          <h2>Worthy Recipes</h2>
+          <div class="grid">
+            <% recipes.forEach(function(recipe) { %>
+            <div class="col-md-6 col-lg-3">
+              <div class="recipe-item">
+                <h4><%= recipe.title %></h4>
+                <ul>
+                  <% recipe.ingredients.forEach(function(ingredient) { %>
+                  <li><%= ingredient %></li>
+                  <% }); %>
+                </ul>
+                <p><%= recipe.description %></p>
+              </div>
+            </div>
+            <% }); %>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- End recipe-section -->
+
+    <section>
+      <div class="contact-section">
+        <div class="container">
+          <h2 class="align-center">Contact Form</h2>
+          <p>Write a little message here about contact us.</p>
+          <form>
+            <div class="field-group">
+              <label for="name">Name</label>
+              <input type="text" id="name" name="name" autocomplete="name">
+            </div>
+            <div class="field-group">
+              <label for="email">Email</label>
+              <input type="email" id="email" name="email" autocomplete="email">
+            </div>
+            <div class="field-group">
+              <label for="message">Message</label>
+              <textarea type="text" id="message" name="message">Write us a note here</textarea>
+            </div>
+            <input type="submit" value="Submit" name="submit" class="button">
+          </form>
+        </div>
+      </div>
+    </section>
+
+    <div class="signup-section">
+      <div class="container">
+        <h3>What’s Brewing?</h3>
+        <p>Wondering what’s next for Cold Brew House? Subscribe and receive email updates. We’ll make sure you are in the loop.</p>
+        <form>
+          <div class="field-group">
+            <input type="email" placeholder="Your Email" name="email">
+            <input type="submit" value="Subscribe" name="subscribe" class="button">
+          </div>
+        </form>
+      </div>
+    </div>
+
+    <footer>
+      <div class="footer">
+        <p class="small">© 2017 Cold Brew House  | Design: Devin Gonzales</p>
+      </div>
+    </footer>
+
+    <script
+  src="https://code.jquery.com/jquery-3.3.1.min.js"
+  integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+  crossorigin="anonymous"></script>
+    <script src="assets/js/main.js"></script>
   </body>
 </html>

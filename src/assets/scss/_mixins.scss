@@ -1,0 +1,89 @@
+/// Mixin to manage responsive breakpoints
+/// @param {String} $breakpoint - Breakpoint name
+/// @require $breakpoints
+@mixin breakpoint($breakpoint) {
+  // If the key exists in the map
+  @if map-has-key($breakpoints, $breakpoint) {
+    // Prints a media query based on the value
+    @media only screen and (min-width: map-get($breakpoints, $breakpoint)) {
+      @content;
+    }
+  }
+
+  // If the key doesn't exist in the map, but arg equals 'small only'
+  @else if $breakpoint == 'small only' {
+    @media only screen and (max-width: map-get($breakpoints, 'medium') - 1  ) {
+          @content;
+    }
+  }
+
+  // Otherwise, if the key doesn't exist in the map
+  @else {
+    @warn "Unfortunately, no value could be retrieved from `#{$breakpoint}`. "
+        + "Available breakpoints are: #{map-keys($breakpoints)}.";
+  }
+}
+
+@mixin clearfix{
+    *zoom:1;
+    &:before,
+    &:after {
+      content:' ';
+      display: table;
+    }
+    &:after {
+      clear: both;
+    }
+}
+
+@mixin border-box {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+
+@mixin border-radius($border) {
+  border-radius: $border;
+}
+
+@mixin bg-mixin($image, $height: 100vh, $bgPosition: center center) {
+      background: linear-gradient(to bottom, rgba(0,0,0,0), rgba(0,0,0,.6)), url($image);
+      background-repeat: no-repeat;
+      background-position: $bgPosition;
+      background-size: cover;
+      height: $height;
+}
+
+
+@mixin button($bg-color, $hover-color, $color){
+      @include border-radius(5px);
+      display: block;
+      background-color: $bg-color;
+      color: $color;
+      text-decoration: none;
+      text-transform: uppercase;
+      font-size: $btn-font-size;
+      transition: all .3s ease;
+      font-weight: $btn-font-weight;
+      padding: 10px 30px;
+      margin-top: 20px;
+      @include tablet{
+        display: inline-block;
+      }
+      &:hover {
+        background-color: $hover-color;
+      }
+}
+
+@mixin grid-images($qty, $margin) {
+      width: ((100% - (($qty - 1) * $margin)) / $qty);
+      &:nth-child(n) {
+        margin-right: $margin;
+        margin-bottom: $margin;
+      }
+      &:nth-child(#{$qty}n + 1) {
+        margin-right: 0;
+        margin-bottom: 0;
+      }
+}
