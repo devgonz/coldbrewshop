@@ -35,7 +35,8 @@ var config = {
   },
   browserSync: {
   	server: dest,
-    port: 8000
+    port: 8080,
+    host: "3.93.50.219"
   },
   data: src + '/assets/data/data.json',
   scripts: {
